@@ -1,0 +1,81 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Didact Gothic', sans-serif;
+    margin: 0;
+}
+a {
+    color: white;
+    text-decoration: none;
+    transition: ease-in-out 0.5s
+}
+a:hover {
+    color: gray;
+}
+p.copyright {
+    font-size: 8pt;
+    color:gray;
+}
+.sidebar {
+    padding-left: 60px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 200px;
+    position: fixed;
+    display:flex;
+    flex-direction: column;
+    padding-right: 60px;
+}
+nav {
+    margin:auto;
+    display: block;
+}
+nav h1 {
+    font-size: 13pt;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+nav h2 {
+    margin-top: 0px;
+    font-size: 10pt;
+    font-weight: normal;
+}
+nav ul {
+    list-style: none;
+    font-size: 10pt;
+    padding-left: 0
+}
+li.header {
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+#maincontent {
+    margin-left: 300px;
+    display:flex;
+    flex-direction:column;
+    height: 100vh;
+}
+#maincontent h3 {
+    font-size: 10pt;
+    font-weight: normal;
+}
+.reader {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    align-self: center;
+}
+.reader iframe {
+    width: 100%;
+    height: 90%;
+    align-self: center;
+}
+.chapternav {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+html {
+    display:block;
+}
