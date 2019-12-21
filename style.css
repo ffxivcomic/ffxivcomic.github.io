@@ -88,6 +88,12 @@ li.header {
     height: 100vh;
     animation: fade-slide-in 2s ease-out;
 }
+.backuplink {
+    font-size: 10pt;
+    text-align: center;
+    color: darkgray;
+    padding-bottom: 40px;
+}
 
 @media only screen and (min-width:700px) {
     .sidebar {
@@ -126,6 +132,9 @@ li.header {
     .indexcontent {
         height: fit-content;
         padding-top: 3%;
+    }
+    li.header {
+        display: none;
     }
 }
 
