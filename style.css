@@ -1,3 +1,8 @@
+@keyframes fade-slide-in {
+    from {top:-40px; opacity: 0;}
+    to {top:0px; opacity: 1;}
+}
+
 body {
     background-color: black;
     color: white;
@@ -15,17 +20,6 @@ a:hover {
 p.copyright {
     font-size: 8pt;
     color:gray;
-}
-.sidebar {
-    padding-left: 60px;
-    height: 100%;
-    top: 0;
-    left: 0;
-    width: 200px;
-    position: fixed;
-    display:flex;
-    flex-direction: column;
-    padding-right: 60px;
 }
 nav {
     margin:auto;
@@ -51,17 +45,23 @@ li.header {
     margin-bottom: 2px;
 }
 #maincontent {
-    margin-left: 300px;
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    justify-content: space-evenly;
+}
+#maincontent nav.chapters {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 #maincontent h3 {
     font-size: 10pt;
     font-weight: normal;
 }
 .reader {
-    height: 100%;
+    height: 100vh;
     width: 90%;
     display: flex;
     align-self: center;
@@ -74,6 +74,59 @@ li.header {
 .chapternav {
     text-align: center;
     padding-bottom: 40px;
+}
+#maincontent img#alfredpic {
+    height: 60vh;
+    display: block;
+}
+.indexcontent {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    animation: fade-slide-in 2s ease-out;
+}
+
+@media only screen and (min-width:700px) {
+    .sidebar {
+        padding-left: 60px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        width: 200px;
+        position: fixed;
+        display:flex;
+        flex-direction: column;
+        padding-right: 60px;
+    }
+    #maincontent {
+        margin-left: 300px;
+    }
+}
+
+/* Mobile */
+
+@media only screen and (max-width:700px) {
+    .sidebar {
+        text-align: center;
+        padding-top: 3%;
+    }
+    .sidebar ul {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    #maincontent nav.chapters {
+        height: 100%;
+        padding-top: 3%;
+    }
+    .indexcontent {
+        height: fit-content;
+        padding-top: 3%;
+    }
 }
 
 html {
