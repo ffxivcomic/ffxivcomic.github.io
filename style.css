@@ -17,9 +17,15 @@ a {
 a:hover {
     color: gray;
 }
-p.copyright {
+p.footer-small-text {
     font-size: 8pt;
     color:gray;
+}
+p.talkyard-credit {
+    font-size: 8pt;
+    color:gray;
+    text-transform: uppercase;
+    text-align: center;
 }
 nav {
     margin:auto;
