@@ -2,6 +2,10 @@
     from {top:-40px; opacity: 0;}
     to {top:0px; opacity: 1;}
 }
+@keyframes fade-in {
+    from { opacity: 0; }
+    to {opacity: 1;}
+}
 
 body {
     background-color: black;
@@ -81,9 +85,34 @@ li.header {
     text-align: center;
     padding-bottom: 40px;
 }
-#maincontent img#alfredpic {
-    height: 60vh;
+#maincontent .logocontainer {
+    display: inline-flex;
+    position: relative;
+    width: max-content;
+    height:70vh;
+    top: 0;
+    left: 0;
+}
+#maincontent img#charpic {
+    height: 100%;
+    position: relative;
     display: block;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    animation: fade-slide-in 2s ease-out;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+#maincontent img#titlepic {
+    height: 100%;
+    position: absolute;
+    display: block;
+    opacity: 0;
+    top: 0;
+    animation: fade-in 2s ease-out;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
 }
 .indexcontent {
     position: relative;
@@ -92,7 +121,9 @@ li.header {
     align-items: center;
     justify-content: space-evenly;
     height: 100vh;
-    animation: fade-slide-in 2s ease-out;
+}
+.indexcontent a {
+    animation: fade-in 2s ease-out;
 }
 .backuplink {
     font-size: 10pt;
